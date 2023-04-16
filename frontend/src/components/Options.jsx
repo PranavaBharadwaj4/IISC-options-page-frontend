@@ -2,16 +2,20 @@ import React, { Fragment, useState } from 'react';
 import Navbar from './Navbar';
 
 const Options = () => {
-  const [inputs, setInputs] = useState(Array(10).fill('')); // initialize the state for the 10 input values
+  const [inputs, setInputs] = useState(Array(10).fill('')); 
+  const [textAreaInput, setTextAreaInput] = useState('');
 
   const handleInputChange = (event, index) => {
     const newInputs = [...inputs];
     newInputs[index] = event.target.value;
     setInputs(newInputs);
   };
+  const handleTextAreaChange = (event) => {
+    setTextAreaInput(event.target.value);
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Submitted input values:', inputs);
+    console.log('Submitted input values(01-10):', inputs, 'Text Area Value Submitted: ', textAreaInput);
   };
 
   return (
@@ -24,7 +28,12 @@ const Options = () => {
         <form  id='options-form' onSubmit={handleSubmit} className="options-box">
             <div className="heading-container">
                 <h2>Options</h2>
-                <textarea className="text-area-input" placeholder="Enter some text..."></textarea>
+                <textarea
+                className="text-area-input"
+                placeholder={textAreaInput ? textAreaInput : "Enter some text..."}
+                value={textAreaInput}
+                onChange={handleTextAreaChange}
+              />
             </div>
             <div className="inputs-container">
                 {inputs.map((inputValue, index) => (
