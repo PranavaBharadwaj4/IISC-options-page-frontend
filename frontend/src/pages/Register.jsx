@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import SocialLoginCard from "../components/SocialLoginCard";
+import Navbar from "../components/Navbar";
 
 function Register() {
   const navigate = useNavigate();
@@ -53,6 +55,13 @@ function Register() {
     setUserValues({ ...userValues, [event.target.name]: event.target.value });
   };
 
+  const handleFacebookLogin= () =>{
+    console.log("facebook")
+  }
+  const handleGoogleLogin= () =>{
+    console.log("google")
+  }
+
   const handleValidation = () => {
     if (userValues.username.length < 4) {
       console.log("Username Should Be More Than 4 Charachters");
@@ -86,11 +95,15 @@ function Register() {
 
   return (
     <>
+    <Navbar />
+
+    <div className="auth-container">
+
       <div className="form-container">
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             {/* <img src="" alt="" /> */}
-            <h1>IISC GPT</h1>
+            <h1>Sign Up</h1>
           </div>
           <input
             type="text"
@@ -124,7 +137,16 @@ function Register() {
             Already Have an Account? <Link to="/login">Login</Link>
           </span>
         </form>
+      <SocialLoginCard
+        leftBtnClick={handleGoogleLogin}
+        leftBtnText='Google'
+        rightBtnClick={handleFacebookLogin}
+        rightBtnText="Facebook"
+      
+      />
       </div>
+      
+    </div>
       <ToastContainer theme="colored" closeOnClick={true} />
     </>
   );

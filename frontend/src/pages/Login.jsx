@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import SocialLoginCard from "../components/SocialLoginCard";
+import Navbar from "../components/Navbar";
 
 
 function Login() {
@@ -75,13 +76,14 @@ function Login() {
 
   return (
     <>
+    <Navbar />
     <div className="auth-container">
 
       <div className="form-container">
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             {/* <img src="" alt="" /> */}
-            <h1>IISC GPT</h1>
+            <h1>Sign In</h1>
           </div>
           <input
             type="text"
