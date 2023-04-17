@@ -1,0 +1,52 @@
+.social-card {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 100vh;
+    background-color: $white-color;
+  
+    .left, .right {
+      width: 40%;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: $off-white-color;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    }
+  
+    .left {
+      margin-right: 10%;
+    }
+  
+    .right {
+      margin-left: 10%;
+    }
+  
+    .bubble {
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    }
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  

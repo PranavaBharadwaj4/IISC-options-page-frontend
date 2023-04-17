@@ -1,0 +1,43 @@
+.social-card {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+.social-card .left, .social-card .right {
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.social-card .left {
+  margin-right: 10%;
+}
+.social-card .right {
+  margin-left: 10%;
+}
+.social-card .bubble {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.social-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.social-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.social-card button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=socialLoginCard.css.map */
